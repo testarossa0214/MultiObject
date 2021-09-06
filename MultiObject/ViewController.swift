@@ -16,6 +16,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sceneView = ARSCNView(frame: self.view.frame)
+        self.view.addSubview(self.sceneView)
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -23,7 +26,35 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
+        
+//        boxの中身の記述。1で1m、chamferRadiusは角の丸み
+        let box = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)    //boxのオブジェクト生成
+        let material = SCNMaterial()             //boxのマテリアルをSCNマテリアルに指定
+//        material.diffuse.contents = UIColor.blue //diffuse.contentsで色指定
+        material.diffuse.contents = UIImage(named: "brick.jpg")     //マテリアル（表面）の要素を画像に
+        
+//        Node作成
+        let node = SCNNode()
+        node.geometry = box                      //形をBOX（四角）に、スフィアで円
+        node.geometry?.materials = [material]    //上のマテリアルを呼び出し
+        node.position = SCNVector3(0, 0.2, -0.5 ) //3次元空間の座標指定 起動したiphoneから見た位置
+        
+//        球体部分
+        let sphere = SCNSphere(radius: 0.2)      //球体のオブジェクトを作って設定
+        let sphereMaterial = SCNMaterial()       //球体のマテリアル(表面)の定義
+//        sphereMaterial.diffuse.contents = UIColor.green     //球体の表面の色設定
+        sphereMaterial.diffuse.contents = UIImage(named: "earthmap.jpeg")   //球体の方のマテリアル(表面)を画像に
+        
+//        球体のNode作成
+        let sphereNode = SCNNode()
+        sphereNode.geometry = sphere             //sphereNodeの形状、ジオメトリー(幾何学模様)を球に指定
+        sphereNode.geometry?.materials = [sphereMaterial]    //オプショナル型でsphereMaterialを指定
+        sphereNode.position = SCNVector3(0.4, 0.1, -1)       //iphoneの位置からの座標
+        
+//        作成Nodeを最上位に追加
+        scene.rootNode.addChildNode(node)        //一番上のnodeにBoxのNodeを追加
+        scene.rootNode.addChildNode(sphereNode)  //一番上のnodeにsphereのNodeを追加
         
         // Set the scene to the view
         sceneView.scene = scene

@@ -15,6 +15,8 @@
 		7943D4D326E59B53002D53C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7943D4D126E59B53002D53C2 /* LaunchScreen.storyboard */; };
 		7943D4DE26E59B53002D53C2 /* MultiObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943D4DD26E59B53002D53C2 /* MultiObjectTests.swift */; };
 		7943D4E926E59B53002D53C2 /* MultiObjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943D4E826E59B53002D53C2 /* MultiObjectUITests.swift */; };
+		7943D4F726E5A201002D53C2 /* brick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7943D4F626E5A201002D53C2 /* brick.jpg */; };
+		7943D4F926E5A21D002D53C2 /* earthmap.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7943D4F826E5A21C002D53C2 /* earthmap.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7943D4E426E59B53002D53C2 /* MultiObjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiObjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7943D4E826E59B53002D53C2 /* MultiObjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiObjectUITests.swift; sourceTree = "<group>"; };
 		7943D4EA26E59B53002D53C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7943D4F626E5A201002D53C2 /* brick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brick.jpg; sourceTree = "<group>"; };
+		7943D4F826E5A21C002D53C2 /* earthmap.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earthmap.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				7943D4C626E59B53002D53C2 /* AppDelegate.swift */,
+				7943D4F826E5A21C002D53C2 /* earthmap.jpeg */,
+				7943D4F626E5A201002D53C2 /* brick.jpg */,
 				7943D4C826E59B53002D53C2 /* art.scnassets */,
 				7943D4CA26E59B53002D53C2 /* ViewController.swift */,
 				7943D4CC26E59B53002D53C2 /* Main.storyboard */,
@@ -234,7 +240,9 @@
 				7943D4C926E59B53002D53C2 /* art.scnassets in Resources */,
 				7943D4D326E59B53002D53C2 /* LaunchScreen.storyboard in Resources */,
 				7943D4D026E59B53002D53C2 /* Assets.xcassets in Resources */,
+				7943D4F926E5A21D002D53C2 /* earthmap.jpeg in Resources */,
 				7943D4CE26E59B53002D53C2 /* Main.storyboard in Resources */,
+				7943D4F726E5A201002D53C2 /* brick.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.vivi.v.valentine.MultiObject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.vivi.v.valentine.BoxAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.vivi.v.valentine.MultiObject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.vivi.v.valentine.BoxAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
